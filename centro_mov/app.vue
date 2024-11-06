@@ -1,5 +1,5 @@
 <template>
-  <NuxtLayout class="w-full">
+  <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
 </template>
@@ -33,3 +33,4 @@
    */
 
 </script>
+

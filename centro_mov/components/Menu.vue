@@ -1,5 +1,5 @@
 <template>
-    <nav class="w-full bg-gray-800 p-5">
+    <nav class="flex w-full bg-gray-700 p-5">
         <div class="flex w-full justify-between items-center">
             <ul class="flex items-center gap-4">
 
@@ -25,13 +25,17 @@
                         </svg>
                     </button>
 
-                    <ul v-if="isDropdownOpen" class="absolute mt-2 w-48 bg-white text-black shadow-lg rounded-lg z-50">
+                    <ul 
+                        v-if="isDropdownOpen"
+                        class="absolute mt-2 w-48 bg-white text-black shadow-lg rounded-lg z-50"
+                    >
                         <li
                             v-for="item in navGateSolicitationsPlus"
                             :key="item.id"
-                            class="p-2 hover:bg-gray-200"
+                            class="flex p-3 hover:bg-gray-200 font-bold text-lg text-gray-700 border-gray-700"
                         >
-                            <NuxtLink 
+                            <NuxtLink
+                                @click="removeDropdown"
                                 :to="item.path"
                                 class="block"
                             >
@@ -47,8 +51,18 @@
 
 <script setup>
 
+    const isDropdownOpen = ref(false)
+
+    const toggleDropdown = () => {
+        isDropdownOpen.value = !isDropdownOpen.value
+    }
+
+    function removeDropdown() {
+        isDropdownOpen.value = false
+    }
+
     const navGateSolicitations = ref([
-    { 
+        { 
             id: 0,
             label: 'Home',
             path: '/',
@@ -59,10 +73,11 @@
             path: '/about',
         },
     ])
+
     const navGateSolicitationsPlus = ref([
         { 
             id: 0,
-            label: 'Ballet escola',
+            label: 'Nosso ensino',
             icon: '',
             path: '/school'
         },
@@ -82,68 +97,9 @@
             id: 3,
             label: 'Contato',
             icon: '',
-            path: '/contact',
+            path: '/home',
         },
     ])
 
-    // const isMenuOpen = ref(false)
-    const isDropdownOpen = ref(false)
-
-    // const toggleMenu = () => {
-    //     isMenuOpen.value = !isMenuOpen.value
-    // }
-
-    const toggleDropdown = () => {
-        isDropdownOpen.value = !isDropdownOpen.value
-    }
-
-    // const items = ref([
-    //     {
-    //         label: 'Home',
-    //         icon: 'pi pi-home'
-    //     },
-    //     {
-    //         label: 'Sobre',
-    //         icon: 'pi pi-star'
-    //     },
-    //     {
-    //         label: 'Mais',
-    //         icon: 'pi pi-search',
-    //         items: [
-    //             {
-    //                 label: 'Novidades',
-    //                 icon: 'pi pi-bolt'
-    //             },
-    //             {
-    //                 label: 'Corpo de Baile',
-    //                 icon: 'pi pi-server'
-    //             },
-    //             {
-    //                 label: 'Nosso ballet',
-    //                 icon: 'pi pi-pencil'
-    //             },
-    //         ]
-    //     },
-    //     {
-    //         label: 'Contact',
-    //         icon: 'pi pi-envelope',
-    //         items: [
-    //             {
-    //                 label: 'Email',
-    //                 icon: 'pi pi-bolt',
-    //                 path: '',
-    //             },
-    //             {
-    //                 label: 'WhatsApp',
-    //                 icon: 'pi pi-server',
-    //                 path: '',
-    //             },
-    //             {
-    //                 label: 'Instagram',
-    //                 icon: 'pi pi-pencil',
-    //                 path: '',
-    //             },
-    //         ]
-    //     }
-    // ]);
 </script>
+

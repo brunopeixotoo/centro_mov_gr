@@ -1,10 +1,7 @@
 <template>
-    <div class="container">
+    <div>
         <Menu></Menu>
         <slot></slot>
+        <Footer></Footer>
     </div>
 </template>
-
-<script setup>
-
-</script>
