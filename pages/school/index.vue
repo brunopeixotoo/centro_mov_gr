@@ -108,7 +108,7 @@
         {
             id: 3,
             url_img: '/img/img-prof-brenon.jpeg',
-            name_teacher: 'Brenon',
+            name_teacher: 'Brenon Lee',
             text_teacher: 'Professor de dança ministerial e contemporâneo',
         },
         {
@@ -120,7 +120,7 @@
         {
             id: 5,
             url_img: '/img/img-prof-lari.jpeg',
-            name_teacher: 'Larissa',
+            name_teacher: 'Larissa Paz',
             text_teacher: 'Professora de ballet infantil',
         },
         {
@@ -132,7 +132,7 @@
         {
             id: 7,
             url_img: '/img/img-prof-kpop.jpeg',
-            name_teacher: 'Nelly Reis',
+            name_teacher: 'Maria Lobo',
             text_teacher: 'Professora de K-pop',
         },
     ])
