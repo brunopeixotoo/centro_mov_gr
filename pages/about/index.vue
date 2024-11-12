@@ -5,7 +5,7 @@
             :key="content.id"
             class="flex flex-col gap-5"
         >
-            <h1 class="uppercase font-bold text-lg text-gray-700">
+            <h1 class="uppercase font-bold text-2xl text-gray-700">
                 {{ content.label }}
             </h1>
             <span class="text-gray-700 text-justify leading-relaxed">
@@ -29,7 +29,7 @@
             label: 'Giselle Rodrigues',
             text: 'A inquietação e o gosto pela diversidade não se tornaram uma marca do trabalho Giselle Rodrigues por acaso. Criada entre a solidão do estudo do piano clássico e a prática de um esporte coletivo, o voleibol, a coreógrafa carioca iniciou-se na dança contemporânea como bailarina do Coringa, da uruguaia GracielaFigueiroa, grupo que marcou época no Rio de Janeiro dos anos 1980. Em 1984, a convite de Dina Sfat, atriz de contornos mitológicos na cena teatral brasileira, deu início aquela que seria a principal vertente de sua carreira nos dez anos subsequentes: diretora de movimento –ex- pressão especialmente cunhada para ela pelo encenador Ulysses Cruz para sublinhar a relevância deseu trabalho no resultado final de algumas dezenas de espetáculos de teatro com que colaborou nesteperíodo.A rubrica, que acabaria se incorporando ao jargão cênico brasileiro, aplica-se também, e com precisão,ao papel que desempenhou, por exemplo, na criação dos movimentos dos bonecos-cachorros da TV Colosso –um marco na programação televisiva infantil brasileira dos anos 1990.',
             url_img: '/img/img-cia-gisa-perfil.jpeg',
-            border_class: 'm-10 rounded'
+            border_class: 'm-10 rounded-md'
         },
         {
             id: 1,

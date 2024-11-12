@@ -83,9 +83,9 @@
         },
         { 
             id: 1,
-            label: 'Corpo de baile',
+            label: 'Marque sua aula!',
             icon: '',
-            path: '/master'
+            path: '/reservation'
         },
         { 
             id: 2,

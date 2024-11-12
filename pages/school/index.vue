@@ -6,7 +6,7 @@
 
         <div class="bg-yellow-400">
             <section class="flex flex-col gap-5 m-8">
-                <span class="uppercase font-bold text-lg text-black">
+                <span class="uppercase font-bold text-2xl text-black">
                     {{ labels.label1 }}
                 </span>
 
@@ -29,7 +29,7 @@
 
                 <NuxtImg
                     :src="imgPageSchool.url_img3"
-                    class="w-full my-5 rounded"
+                    class="w-full my-5 rounded-md"
                 />
             </section>
         </div>
@@ -38,18 +38,18 @@
 
         <div class="bg-white">
             <section class="flex flex-col gap-10 m-8">
-                <span class="uppercase font-bold text-lg text-gray-700">
+                <span class="uppercase font-bold text-2xl text-gray-700">
                     {{ labels.label2 }}
                 </span>
 
                 <div
                     v-for="data in dataOurTime"
                     :key="data.id"
-                    class="flex flex-col items-center gap-5 mb-5"
+                    class="flex flex-col items-center gap-5 mb-5 drop-shadow-lg"
                 >
                     <NuxtImg
                         :src="data.url_img"
-                        class="rounded-full size-48 shadow-sm"
+                        class="rounded-full size-48"
                     />
 
                     <div class="flex flex-col items-center">

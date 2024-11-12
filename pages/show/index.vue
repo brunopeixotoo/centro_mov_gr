@@ -1,35 +1,33 @@
 <template>
-    <section class="flex flex-col gap-10">
-        <div class="bg-yellow-500">
+    <section class="flex flex-col bg-yellow-400">
+        <NuxtImg
+            src="/img/img-show-school.jpeg"
+        />
+        <h1 class="uppercase font-bold text-2xl p-10">
+            {{ labels.label1 }}
+        </h1>
+
+        <div v-for="item in dataShow"
+            :key="item.id"
+            class="flex flex-col gap-5 drop-shadow-lg"
+        >
+            <span class="font-semibold text-gray-900 text-lg px-10 mt-5">
+                {{ item.label }}
+            </span>
+
+
             <NuxtImg
-                src="/img/img-show-school.jpeg"
+                :src="item.url_img" 
+                class="rounded-md mx-10"
             />
-            <h1 class="uppercase font-bold text-lg m-8">
-                {{ labels.label1 }}
-            </h1>
 
-            <div v-for="item in dataShow"
-                :key="item.id"
-                class="flex flex-col gap-5 m-10"
-            >
-                <span
-                    class="font-semibold text-gray-900 text-lg"
-                > 
-                    {{ item.label }} 
-                </span>
-
-                <NuxtImg
-                    :src="item.url_img"
-                    class="rounded"
-                />
-
-                <span class="text-justify mb-5"> 
-                    {{ item.description }} 
-                </span>
+            <div class="bg-white p-6 text-justify mb-5 w-full">
+                {{ item.description }}
             </div>
         </div>
     </section>
 </template>
+
 
 <script setup>
 
