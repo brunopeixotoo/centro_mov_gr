@@ -126,7 +126,7 @@
         {
             id: 6,
             url_img: '/img/img-prof-ballet.jpeg',
-            name_teacher: 'Nelly Reis',
+            name_teacher: 'Nyamille Ferreira',
             text_teacher: 'Professora de ballet clássico infantil e juvenil',
         },
         {

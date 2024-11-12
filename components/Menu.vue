@@ -89,12 +89,18 @@
         },
         { 
             id: 2,
+            label: 'Espetáculos',
+            icon: '',
+            path: '/show'
+        },
+        { 
+            id: 3,
             label: 'Novidades',
             icon: '',
             path: '/news',
         },
         { 
-            id: 3,
+            id: 4,
             label: 'Contato',
             icon: '',
             path: '/home',

@@ -1,5 +1,5 @@
 <template>
     <header>
-        <img src="/img/img-cia-menu-kids.jpeg" class="w-full" alt="Imagem Cia" />
+        <img src="/img/img-banner-school.jpeg" class="w-full" alt="Imagem Cia" />
     </header>
 </template>
