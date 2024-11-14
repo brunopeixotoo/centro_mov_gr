@@ -1,5 +1,5 @@
 <template>
     <header>
-        <img src="/img/img-banner-school.jpeg" class="w-full" alt="Imagem Cia" />
+        <NuxtImg src="/img/img-banner-school.jpeg" class="w-full" alt="Imagem Cia" />
     </header>
 </template>
