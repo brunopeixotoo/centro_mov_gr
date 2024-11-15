@@ -18,7 +18,7 @@
                         :key="image.id"
                         :src="image.url_image"
                         :alt="image.alt"
-                        class="w-full object-cover"
+                        class="w-full flex-shrink-0 object-cover"
                     />
                 </div>
 
@@ -49,7 +49,7 @@
                             :key="image.id"
                             :src="image.url_image"
                             :alt="image.alt"
-                            class="w-full object-cover"
+                            class="w-full flex-shrink-0 object-cover"
                         />
                     </div>
 
