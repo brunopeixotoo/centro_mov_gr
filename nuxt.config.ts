@@ -9,8 +9,5 @@ export default defineNuxtConfig({
     '@nuxt/image'
   ],
 
-  plugins: ['~/plugins/primevue.js'],
-
-
 })
 
