@@ -11,5 +11,6 @@ export default defineNuxtConfig({
 
   plugins: ['~/plugins/primevue.js'],
 
+
 })
 

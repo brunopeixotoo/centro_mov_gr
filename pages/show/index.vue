@@ -1,5 +1,5 @@
 <template>
-    <section class="flex flex-col bg-yellow-400">
+    <section class="flex flex-col bg-yellow-300">
         <NuxtImg
             src="/img/img-show-school.jpeg"
         />

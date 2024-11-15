@@ -4,7 +4,7 @@
             :src="imgPageSchool.url_img1"
         />
 
-        <div class="bg-yellow-400">
+        <div class="bg-yellow-300">
             <section class="flex flex-col gap-5 m-8">
                 <span class="uppercase font-bold text-2xl text-black">
                     {{ labels.label1 }}
