@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col m-8">
+    <div class="flex flex-col m-8 select-none">
         <section
             v-for="content in textAbout"
             :key="content.id"
@@ -27,7 +27,7 @@
         {
             id: 0,
             label: 'Giselle Rodrigues',
-            text: 'A inquietação e o gosto pela diversidade não se tornaram uma marca do trabalho Giselle Rodrigues por acaso. Criada entre a solidão do estudo do piano clássico e a prática de um esporte coletivo, o voleibol, a coreógrafa carioca iniciou-se na dança contemporânea como bailarina do Coringa, da uruguaia GracielaFigueiroa, grupo que marcou época no Rio de Janeiro dos anos 1980. Em 1984, a convite de Dina Sfat, atriz de contornos mitológicos na cena teatral brasileira, deu início aquela que seria a principal vertente de sua carreira nos dez anos subsequentes: diretora de movimento –ex- pressão especialmente cunhada para ela pelo encenador Ulysses Cruz para sublinhar a relevância deseu trabalho no resultado final de algumas dezenas de espetáculos de teatro com que colaborou nesteperíodo.A rubrica, que acabaria se incorporando ao jargão cênico brasileiro, aplica-se também, e com precisão,ao papel que desempenhou, por exemplo, na criação dos movimentos dos bonecos-cachorros da TV Colosso –um marco na programação televisiva infantil brasileira dos anos 1990.',
+            text: 'A inquietação e o gosto pela diversidade não se tornaram uma marca do trabalho Giselle Rodrigues por acaso. Paraense criada em Roraima, a coreógrafa iniciou-se na dança como bailarina da Escola de Dança Cristina Rocha no início do anos 2000, grupo que marcou época em Boa Vista. Em 2015, deu início aquela que seria a principal vertente de sua carreira nos dez anos subsequentes: diretora de movimento – ex-pressão especialmente cunhada a ela por desenvolver uma filosofia de dança que não centraliza a expressão do movimento por simples repetições e, principalmente, aplicadas a diversas danças. O que sublinhou a relevância de seu trabalho no resultado final de quase uma dezena de espetáculos de dança com que colaborou neste período. A rubrica, que acabaria se incorporando ao jargão cênico, aplica-se também, e com precisão em seus atuais trabalhos, onde desenvolve a dança em grandes assuntos de crítica social, utilizando músicas nacionais e internacionais.',
             url_img: '/img/img-cia-gisa-perfil.jpeg',
             border_class: 'm-10 rounded-md'
         },

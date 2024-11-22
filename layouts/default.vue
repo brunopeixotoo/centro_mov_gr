@@ -2,6 +2,6 @@
     <div>
         <Menu></Menu>
         <slot></slot>
-        <Footer></Footer>
+        <Footer id="contact-footer"></Footer>
     </div>
 </template>

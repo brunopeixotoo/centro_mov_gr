@@ -24,9 +24,14 @@
                 <p class="text-gray-900 font-semibold">
                     {{ item.section }}
                 </p>
-                <span class="text-gray-900 underline decoration solid cursor-pointer hover:text-sky-700">
+
+                <NuxtLink
+                    class="text-blue-900 underline decoration solid cursor-pointer hover:text-sky-700"
+                    :to="item.path_ticket"
+                    target="_blanck"
+                >
                     Comprar ingresso
-                </span>
+                </NuxtLink>
             </div>
             
             <NuxtImg
@@ -46,7 +51,8 @@
             label:'Um Encanto de Natal',
             description:'O Centro de Movimento Giselle Rodrigues Apresenta: Dia 20 de Dezembro de 2024, no Teatro itemaber Xaud.',
             section:'Sessões: 17hrs ou 19hrs',
-            url_img: '/img/img-news-natal-show.jpeg'
+            url_img: '/img/img-news-natal-show.jpeg',
+            path_ticket: 'https://pigz.com.br/eventos/um-encanto-de-natal-boa-vista-emcufkovn4'
         }
     ])
 

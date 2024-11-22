@@ -63,7 +63,7 @@
         },
         {
             id: 3,
-            path: 'centrodemovimentogr@gmail.com',
+            path: 'mailto:gisellecarolrs@gmail.com',
             svgItems: {                
                 xlms: 'http://www.w3.org/2000/svg',
                 viewBox: '0 0 24 24',

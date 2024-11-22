@@ -65,7 +65,7 @@
 
                 <NuxtLink 
                     :to="'/news'"
-                    class="flex justify-center m-5 p-2 rounded-lg text-white bg-gray-600 underline decoration solid cursor-pointer hover:bg-yellow-300"
+                    class="flex justify-center m-5 p-2 rounded-lg text-white bg-gray-600 solid cursor-pointer hover:bg-yellow-300"
                 >
                     Saiba mais
                 </NuxtLink>
