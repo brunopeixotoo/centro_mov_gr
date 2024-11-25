@@ -34,8 +34,9 @@
         </div>
 
         <div class="flex flex-col gap-5 drop-shadow-lg">
-            <h1 class="text-justify m-10 font-semibold">{{ label }}</h1>
-            
+            <h1 class="text-justify m-10 font-semibold">
+                {{ label }}
+            </h1>
             <div class="flex flex-col">
                 <div class="flex flex-row w-full overflow-hidden items-center">
                     <div 
@@ -71,6 +72,10 @@
                 </NuxtLink>
             </div>
         </div>
+
+        <div class="flex flex-col gap-5">
+
+        </div>
     </section>
 </template>
 
@@ -80,7 +85,7 @@
     const imagesTop = ref([
         {
             id: 0,
-            url_image: '/img/img-cia-alunos.jpeg',
+            url_image: '/img/img-show-ballet-teen.jpeg',
             alt: 'Imagem 1'
         },
         {
@@ -92,7 +97,17 @@
             id: 2,
             url_image: '/img/img-school-apresentation-kids.jpg',
             alt: 'Imagem 3'
-        }
+        },
+        {
+            id: 3,
+            url_image: '/img/img-show-kids-teachers.jpeg',
+            alt: 'Imagem 4'
+        },
+        {
+            id: 4,
+            url_image: '/img/img-show-school.jpeg',
+            alt: 'Imagem 4'
+        },
     ]);
 
 

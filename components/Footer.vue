@@ -24,13 +24,17 @@
             </NuxtLink>
         </div>
 
-        <div
+        <NuxtLink
             v-for="item in adress"
             :key="item.id"
-            class="text-white font-serif"
+            class="text-white font-serif underline decoration"
+            href="https://maps.app.goo.gl/q9Cs7juHuEzdu1Ut7"
+            target="_blank"
         >
-            <span>{{ item.dataAdress }}</span>
-        </div>
+            <span>
+                {{ item.dataAdress }}
+            </span>
+        </NuxtLink>
     </footer>
 </template>
 

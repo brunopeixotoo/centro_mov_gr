@@ -27,10 +27,31 @@
                     {{ textSchool.text2 }}
                 </span>
 
-                <NuxtImg
-                    :src="imgPageSchool.url_img3"
-                    class="w-full my-5 rounded-md"
-                />
+                <div class="flex flex-row w-full overflow-hidden items-center">
+                    <div 
+                        class="flex transition-transform duration-700"
+                        :style="{ 
+                            transform: `translateX(-${currentIndexShow * 100}%)` 
+                        }"
+                    >
+                        <NuxtImg
+                            v-for="image in imagesShow"
+                            :key="image.id"
+                            :src="image.url_image"
+                            :alt="image.alt"
+                            class="w-full flex-shrink-0 object-cover rounded"
+                        />
+                    </div>
+
+                    <button @click="prevSlideShow"
+                        class="m-4 absolute -left-4  bg-gray-700 text-white p-2 rounded-full">
+                        &#8592;
+                    </button>
+                    <button @click="nextSlideShow"
+                        class="m-4 absolute -right-4  bg-gray-700 text-white p-2 rounded-full">
+                        &#8594;
+                    </button>
+                </div>
             </section>
         </div>
 
@@ -136,5 +157,38 @@
             text_teacher: 'Professora de K-pop',
         },
     ])
+
+
+    const imagesShow = ref([
+        {
+            id: 0,
+            url_image: '/img/img-cia-alunos.jpeg',
+            alt: 'Imagem 1'
+        },
+        {
+            id: 1,
+            url_image: '/img/img-school-ballet-teen.jpeg',
+            alt: 'Imagem 2'
+        },
+        {
+            id: 2,
+            url_image: '/img/img-school-mothers.jpeg',
+            alt: 'Imagem 3'
+        },
+    ]);
+    
+    const currentIndexShow = ref(0);
+
+    const nextSlideShow = () => {
+        currentIndexShow.value = (currentIndexShow.value + 1) % imagesShow.value.length;
+    };
+
+    const prevSlideShow = () => {
+        currentIndexShow.value = (currentIndexShow.value - 1 + imagesShow.value.length) % imagesShow.value.length;
+    };
+
+    const goToSlideShow = (index) => {
+        currentIndexShow.value = index;
+    };
 
 </script>
