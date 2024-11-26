@@ -1,5 +1,11 @@
 <template>
-    <section>
+    <div v-if="isLoading">
+        <div class="flex justify-center items-center m-40">
+            <h1 class="font-semibold text-gray-500"> Carregando...</h1>
+        </div>
+    </div>
+
+    <section v-else>
         <NuxtImg
             src="/img/img-banner-school.jpeg"
             class="w-full" alt="Imagem Cia"
@@ -44,6 +50,12 @@
 </template>
 
 <script setup>
+
+    onMounted(() => {
+        setTimeout(() => {
+            isLoading.value = true
+        }, 2000)
+    })
 
     const newsData = ref([
         {

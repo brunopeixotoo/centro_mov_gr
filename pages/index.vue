@@ -1,5 +1,12 @@
 <template>
-    <section>
+
+    <div v-if="isLoading">
+        <div class="flex justify-center items-center m-40">
+            <h1 class="font-semibold text-gray-500"> Carregando...</h1>
+        </div>
+    </div>
+
+    <section v-else>
         <NuxtImg
             src="/img/img-banner-school.jpeg" 
             class="w-full"
@@ -33,7 +40,7 @@
             </div>
         </div>
 
-        <div class="flex flex-col gap-5 drop-shadow-lg">
+        <div class="flex flex-col gap- drop-shadow-lg">
             <h1 class="text-justify m-10 font-semibold">
                 {{ label }}
             </h1>
@@ -66,21 +73,23 @@
 
                 <NuxtLink 
                     :to="'/news'"
-                    class="flex justify-center m-5 p-2 rounded-lg text-white bg-gray-600 solid cursor-pointer hover:bg-yellow-300"
+                    class="flex justify-center m-10 p-2 rounded-lg text-white bg-gray-600 solid cursor-pointer hover:bg-yellow-300"
                 >
                     Saiba mais
                 </NuxtLink>
             </div>
-        </div>
-
-        <div class="flex flex-col gap-5">
-
         </div>
     </section>
 </template>
 
 
 <script setup>
+
+    onMounted(() => {
+        setTimeout(() => {
+            isLoading.value = true
+        }, 2000)
+    })
 
     const imagesTop = ref([
         {

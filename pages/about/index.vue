@@ -1,6 +1,12 @@
 <template>
-    <div class="flex flex-col m-8 select-none">
-        <section
+    <div v-if="isLoading">
+        <div class="flex justify-center items-center m-40">
+            <h1 class="font-semibold text-gray-500"> Carregando...</h1>
+        </div>
+    </div>
+
+    <section v-else class="flex flex-col m-8 select-none">
+        <div
             v-for="content in textAbout"
             :key="content.id"
             class="flex flex-col gap-5"
@@ -17,11 +23,17 @@
                 alt="Imagem de {{ content.label }}"
                 :class="content.border_class"
             />
-        </section>
-    </div>
+        </div>
+    </section>
 </template>
 
 <script setup>
+
+    onMounted(() => {
+        setTimeout(() => {
+            isLoading.value = true
+        }, 2000)
+    })
 
     const textAbout = ref([
         {

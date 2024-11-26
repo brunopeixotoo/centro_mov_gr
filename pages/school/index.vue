@@ -1,5 +1,12 @@
 <template>
-    <section class="flex flex-col">
+
+    <div v-if="isLoading">
+        <div class="flex justify-center items-center m-40">
+            <h1 class="font-semibold text-gray-500"> Carregando...</h1>
+        </div>
+    </div>
+
+    <section v-else class="flex flex-col">
         <NuxtImg
             :src="imgPageSchool.url_img1"
         />
@@ -27,7 +34,7 @@
                     {{ textSchool.text2 }}
                 </span>
 
-                <div class="flex flex-row w-full overflow-hidden items-center">
+                <div class="flex flex-row w-full overflow-hidden items-center mb-5">
                     <div 
                         class="flex transition-transform duration-700"
                         :style="{ 
@@ -55,7 +62,21 @@
             </section>
         </div>
 
-        <hr>
+        <div class="bg-yellow-300 drop-shadow-lg">
+            <div class="flex m-20">
+                <video 
+                    controls 
+                    autoplay="false"
+                    loop
+                >
+                    <source
+                        src="/public/video/video-show.mp4"
+                        type="video/mp4"
+                        @click="videoAction()"
+                    />
+                </video>
+            </div>
+        </div>
 
         <div class="bg-white">
             <section class="flex flex-col gap-10 m-8">
@@ -89,6 +110,12 @@
 </template>
 
 <script setup>
+
+    onMounted(() => {
+        setTimeout(() => {
+            isLoading.value = true
+        }, 2000)
+    })
 
     const labels = ref({
         label1: 'Nosso ensino',
@@ -172,10 +199,24 @@
         },
         {
             id: 2,
+            url_image: '/img/img-cia-teen-teatro-2.jpg',
+            alt: 'Imagem 3'
+        },
+        {
+            id: 3,
+            url_image: '/img/img-school-room-kids.jpg',
+            alt: 'Imagem 3'
+        },
+        {
+            id: 4,
             url_image: '/img/img-school-mothers.jpeg',
             alt: 'Imagem 3'
         },
     ]);
+
+    const videoShow = ref({
+        video: '/public/video/video-show.mp4'
+    })
     
     const currentIndexShow = ref(0);
 
@@ -190,5 +231,6 @@
     const goToSlideShow = (index) => {
         currentIndexShow.value = index;
     };
+
 
 </script>
